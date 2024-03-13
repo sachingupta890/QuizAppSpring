@@ -44,6 +44,7 @@ public class QuestionService {
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);    }
 
     public ResponseEntity<String> deleteQuestion(Integer id) {
+        System.out.println("deleting questions");
         try{
             questiondao.deleteById(id);
             return new ResponseEntity<>("Deletion Succesfull",HttpStatus.OK);
