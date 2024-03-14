@@ -1,5 +1,6 @@
 package com.Quiz.quizapp.services;
 
+import com.Quiz.quizapp.Aspects.TrackExecutionTime;
 import com.Quiz.quizapp.dao.QuestionDao;
 import com.Quiz.quizapp.dao.QuizDao;
 import com.Quiz.quizapp.model.QuestionModel;
@@ -21,7 +22,7 @@ public class QuizService {
     QuizDao quizDao;
     @Autowired
     QuestionDao questionDao;
-
+    @TrackExecutionTime
     public ResponseEntity<String> createQuiz(String category, int numQ, String title) {
 
         try{
@@ -38,7 +39,7 @@ public class QuizService {
         }
         return new ResponseEntity<>("Cannot create Quiz",HttpStatus.BAD_REQUEST);
     }
-
+    @TrackExecutionTime
     public ResponseEntity<List<QuestionWrapper>> getQuizQuestions(Integer id) {
         Optional<QuizModel> quiz = quizDao.findById(id);
         List<QuestionModel> questionsfromDB = quiz.get().getQuestions();
@@ -54,7 +55,7 @@ public class QuizService {
         return new ResponseEntity<>(questionsForUser,HttpStatus.OK);
     }
 
-
+    @TrackExecutionTime
     public ResponseEntity<Integer> calculateResult(Integer id, List<Response> responses) {
         QuizModel quiz = quizDao.findById(id).get();
 

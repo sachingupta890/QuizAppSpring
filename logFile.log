@@ -1,0 +1,32 @@
+2024-03-14T11:30:39.289+05:30  INFO 10668 --- [quizapp] [main] com.Quiz.quizapp.QuizappApplication      : Starting QuizappApplication using Java 21.0.2 with PID 10668 (C:\Users\CT-D-011\Desktop\quizapp\target\classes started by CT-D-011 in C:\Users\CT-D-011\Desktop\quizapp)
+2024-03-14T11:30:39.292+05:30  INFO 10668 --- [quizapp] [main] com.Quiz.quizapp.QuizappApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-03-14T11:30:44.976+05:30  INFO 10668 --- [quizapp] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-14T11:30:45.321+05:30  INFO 10668 --- [quizapp] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 268 ms. Found 2 JPA repository interfaces.
+2024-03-14T11:30:51.110+05:30  INFO 10668 --- [quizapp] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-14T11:30:51.258+05:30  INFO 10668 --- [quizapp] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-14T11:30:51.259+05:30  INFO 10668 --- [quizapp] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-14T11:30:51.658+05:30  INFO 10668 --- [quizapp] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-14T11:30:51.658+05:30  INFO 10668 --- [quizapp] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 12101 ms
+2024-03-14T11:30:52.849+05:30  INFO 10668 --- [quizapp] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-14T11:30:54.950+05:30  INFO 10668 --- [quizapp] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-03-14T11:30:55.292+05:30  INFO 10668 --- [quizapp] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-14T11:30:56.885+05:30  INFO 10668 --- [quizapp] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-14T11:30:57.210+05:30  INFO 10668 --- [quizapp] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-14T11:31:02.182+05:30  INFO 10668 --- [quizapp] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@77bb916f
+2024-03-14T11:31:02.185+05:30  INFO 10668 --- [quizapp] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-14T11:31:02.622+05:30  WARN 10668 --- [quizapp] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-14T11:31:08.560+05:30  INFO 10668 --- [quizapp] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-14T11:31:08.946+05:30  INFO 10668 --- [quizapp] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-14T11:31:12.879+05:30  INFO 10668 --- [quizapp] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-03-14T11:31:13.287+05:30  WARN 10668 --- [quizapp] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-14T11:31:14.747+05:30  INFO 10668 --- [quizapp] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-14T11:31:14.762+05:30  INFO 10668 --- [quizapp] [main] com.Quiz.quizapp.QuizappApplication      : Started QuizappApplication in 40.942 seconds (process running for 45.528)
+2024-03-14T11:31:15.237+05:30  INFO 10668 --- [quizapp] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-14T11:31:15.237+05:30  INFO 10668 --- [quizapp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-14T11:31:15.239+05:30  INFO 10668 --- [quizapp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-03-14T11:31:15.417+05:30  INFO 10668 --- [quizapp] [http-nio-8080-exec-1] c.Q.q.A.ExecutionTimeTrackerAdvice       : Method Execution Start
+2024-03-14T11:31:17.035+05:30  INFO 10668 --- [quizapp] [http-nio-8080-exec-1] c.Q.q.A.ExecutionTimeTrackerAdvice       : Method Execution Completed
+2024-03-14T11:31:17.037+05:30  INFO 10668 --- [quizapp] [http-nio-8080-exec-1] c.Q.q.A.ExecutionTimeTrackerAdvice       : ResponseEntity com.Quiz.quizapp.services.QuestionService.getAllQuestions()/nMethod took time to execute ------>>>> 1618 ms
+2024-03-14T11:39:10.939+05:30  INFO 10668 --- [quizapp] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-14T11:39:10.942+05:30  INFO 10668 --- [quizapp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-14T11:39:10.992+05:30  INFO 10668 --- [quizapp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
