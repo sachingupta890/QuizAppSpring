@@ -25,6 +25,7 @@ public class QuestionController {
         return questionService.getQuestionByCategory(category);
     }
     @GetMapping("level/{level}")
+
     public ResponseEntity<List<QuestionModel>> findBylevel(@PathVariable String level){
         return questionService.findBylevel(level);
     }
