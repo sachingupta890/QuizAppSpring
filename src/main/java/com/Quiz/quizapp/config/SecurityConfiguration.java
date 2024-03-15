@@ -41,7 +41,9 @@ public class SecurityConfiguration
         http.csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests((authorize) ->
                         authorize.requestMatchers("/user/**").permitAll()
-                                .requestMatchers("/student/**").hasAuthority("ROLE_USER"))
+                                .requestMatchers("/student/**").hasAuthority("ROLE_USER")
+                                .requestMatchers("/question/**").hasAuthority("ROLE_ADMIN")
+                                .requestMatchers("/quiz/**").hasAuthority("ROLE_ADMIN"))
                 .httpBasic(withDefaults());
 
 
@@ -57,24 +59,3 @@ public class SecurityConfiguration
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

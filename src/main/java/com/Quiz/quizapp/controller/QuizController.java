@@ -23,12 +23,7 @@ public class QuizController {
 
     }
     @GetMapping("get/{id}")
-    public ResponseEntity<List<QuestionWrapper>> getQuizQuestions(@PathVariable Integer id){
-        return quizService.getQuizQuestions(id);
-    }
-
-    @PostMapping("submit/{id}")
-    public ResponseEntity<Integer> sumitQuiz(@PathVariable Integer id , @RequestBody List<Response> responses ){
-        return quizService.calculateResult(id,responses);
+    public ResponseEntity<List<QuestionModel>> getQuizQuestions(@PathVariable Integer id){
+        return quizService.getQuizQuestionsAdmin(id);
     }
 }

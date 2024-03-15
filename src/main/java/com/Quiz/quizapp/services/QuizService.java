@@ -80,4 +80,14 @@ public class QuizService {
 
         return new ResponseEntity<>(right,HttpStatus.OK);
     }
+    @TrackExecutionTime
+    public ResponseEntity<List<QuestionModel>> getQuizQuestionsAdmin(Integer id) {
+        Optional<QuizModel> quiz = quizDao.findById(id);
+        List<QuestionModel> questionsfromDB = quiz.get().getQuestions();
+
+
+
+
+        return new ResponseEntity<>(questionsfromDB,HttpStatus.OK);
+    }
 }

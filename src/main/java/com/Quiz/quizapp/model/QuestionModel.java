@@ -23,5 +23,4 @@ public class QuestionModel {
 
     private String difficultyLevel;
 
-
 }

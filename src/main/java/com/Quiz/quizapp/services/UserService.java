@@ -1,5 +1,6 @@
 package com.Quiz.quizapp.services;
 
+import com.Quiz.quizapp.Aspects.Bcrypt;
 import com.Quiz.quizapp.Aspects.TrackExecutionTime;
 import com.Quiz.quizapp.dao.UserRepo;
 import com.Quiz.quizapp.model.UserModel;
@@ -17,10 +18,10 @@ public class UserService {
 
     @Autowired
     PasswordEncoder passwordEncoder;
-
+    @Bcrypt
     public boolean registration(UserModel user) {
 
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
+
 
          UserModel newUser = userRepo.save(user);
 
