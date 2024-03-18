@@ -18,13 +18,13 @@ public class StudentController {
     QuizService quizService;
 
     @GetMapping("get/{id}")
-    @PreAuthorize("hasAuthority('ROLE_USER')")
+//    @PreAuthorize("hasAuthority('ROLE_USER')")
     public ResponseEntity<List<QuestionWrapper>> getQuizQuestions(@PathVariable Integer id){
         return quizService.getQuizQuestions(id);
     }
 
     @PostMapping("submit/{id}")
-    @PreAuthorize("hasAuthority('ROLE_USER')")
+//    @PreAuthorize("hasAuthority('ROLE_USER')")
     public ResponseEntity<Integer> sumitQuiz(@PathVariable Integer id , @RequestBody List<Response> responses ){
         return quizService.calculateResult(id,responses);
     }

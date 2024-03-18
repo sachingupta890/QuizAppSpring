@@ -17,7 +17,7 @@ import java.util.List;
 public class QuizController {
     @Autowired
     QuizService quizService;
-    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+//    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     @PostMapping("create")
     public ResponseEntity<String> createQuiz(@RequestParam String category,@RequestParam int numQ, @RequestParam String title){
 
@@ -25,7 +25,7 @@ public class QuizController {
 
     }
     @GetMapping("get/{id}")
-    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+//    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     public ResponseEntity<List<QuestionModel>> getQuizQuestions(@PathVariable Integer id){
         return quizService.getQuizQuestionsAdmin(id);
     }
