@@ -19,12 +19,12 @@ public class QuestionService {
     QuestionDao questiondao;
     @TrackExecutionTime
     public ResponseEntity<List<QuestionModel>> getAllQuestions() {
-        try{
-            return new ResponseEntity<>(questiondao.findAll(), HttpStatus.OK);
-        }catch(Exception e){
-            e.printStackTrace();
+        try {
+            List<QuestionModel> questions = questiondao.findAll();
+            return ResponseEntity.ok().body(questions);
+        } catch (Exception e) {
+           throw e;
         }
-        return new ResponseEntity<>(new ArrayList<>(),HttpStatus.BAD_REQUEST);
     }
     @TrackExecutionTime
     public ResponseEntity<List<QuestionModel>> getQuestionByCategory(String category) {

@@ -31,8 +31,13 @@ public class QuizService {
             quiz.setTitle(title);
             quiz.setQuestions(questions);
             quizDao.save(quiz);
+            Integer quizId = quiz.getId();
 
-            return new ResponseEntity<>("Succesfully created the Quiz", HttpStatus.CREATED);
+            // Create the response string including the quiz ID
+            String response = "Successfully created the Quiz with id " + quizId;
+
+
+            return new ResponseEntity<>(response, HttpStatus.CREATED);
 
         }catch(Exception e){
             e.printStackTrace();
